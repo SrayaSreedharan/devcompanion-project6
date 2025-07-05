@@ -10,7 +10,7 @@ const Tabs = () => {
   ];
 
   return (
-    <div className="flex w-full max-w-4xl mx-auto rounded-md overflow-hidden bg-gray-100 text-sm">
+    <div className="flex w-full max-w-6xl mx-auto rounded-md overflow-hidden bg-gray-100 text-sm">
       {tabs.map((tab) => (
         <button
           key={tab.id}

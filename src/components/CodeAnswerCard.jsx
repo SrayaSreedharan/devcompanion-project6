@@ -18,8 +18,6 @@ const CodeAnswerCard = () => {
     <div className="bg-[#111827] text-white min-h-screen flex items-center justify-center p-6">
       <div className="bg-[#1F2937] p-6 rounded-xl w-full max-w-6xl shadow-md space-y-6">
         <h2 className="text-2xl font-semibold">Ask Your Question</h2>
-
-        {/* Grid of Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {cardDetails.map((item, idx) => (
             <Card
@@ -31,14 +29,7 @@ const CodeAnswerCard = () => {
             />
           ))}
         </div>
-
-        {/* Textarea */}
-        <textarea
-          placeholder="Ask me anything about your code... (e.g., 'Why is this React hook not working?', 'How to optimize this function?')"
-          className="w-full h-28 bg-[#0F172A] text-white rounded-md p-4 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-
-        {/* Ask Button */}
+        <textarea placeholder="Ask me anything about your code... (e.g., 'Why is this React hook not working?', 'How to optimize this function?')" className="w-full h-28 bg-[#0F172A] text-white rounded-md p-4 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"/>
         <button className="w-full bg-[#1D4ED8] hover:bg-[#2563EB] text-white rounded-md py-3 text-sm flex items-center justify-center space-x-2">
           <svg
             className="w-4 h-4"

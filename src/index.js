@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
-import CodeAnswerCard from './components/CodeAnswerCard';
+import Home from './pages/Home';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <CodeAnswerCard/>
+    <Home/>
+    
   </React.StrictMode>
 );
 
