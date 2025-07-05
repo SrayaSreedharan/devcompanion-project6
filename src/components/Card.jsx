@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Card = ({ item}) => {
+const Card = ({ label, icon, onClick, className }) => {
   return (
-    <button onClick={item.onClick} className={item.className}>
-      <div className="text-2xl">{item.icon}</div>
-      <div>{item.label}</div>
+    <button onClick={onClick} className={className}>
+      <div className="text-2xl">{icon}</div>
+      <div>{label}</div>
     </button>
   );
 };
