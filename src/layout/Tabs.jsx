@@ -1,0 +1,31 @@
+import React, { useState } from 'react';
+
+const Tabs = () => {
+  const [activeTab, setActiveTab] = useState('ask');
+
+  const tabs = [
+    { id: 'ask', label: 'Ask AI' },
+    { id: 'results', label: 'Results (0)' },
+    { id: 'history', label: 'History' },
+  ];
+
+  return (
+    <div className="flex w-full max-w-4xl mx-auto rounded-md overflow-hidden bg-gray-100 text-sm">
+      {tabs.map((tab) => (
+        <button
+          key={tab.id}
+          onClick={() => setActiveTab(tab.id)}
+          className={`flex-1 py-3 font-medium transition-colors duration-200 ${
+            activeTab === tab.id
+              ? 'bg-white text-black'
+              : 'text-gray-500 hover:bg-gray-200'
+          }`}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+  );
+};
+
+export default Tabs;
