@@ -1,12 +1,13 @@
 import React from 'react';
 import Card from './Card';
+import { Bug, Zap, Lightbulb, Code } from 'lucide-react';
 
 const CodeAnswerCard = () => {
   const cardDetails = [
-    { label: 'Debug this code', icon: '🧩' },
-    { label: 'Optimize performance', icon: '⚡' },
-    { label: 'Explain concept', icon: '💡' },
-    { label: 'Best practices', icon: '</>' },
+    { label: 'Debug this code',icon: <Bug size={15} /> },
+    { label: 'Optimize performance', icon: <Zap size={15} />  },
+    { label: 'Explain concept', icon: <Lightbulb size={15} />  },
+    { label: 'Best practices', icon: <Code size={15} /> },
   ];
 
   const handleCardClick = (label) => {
@@ -27,8 +28,11 @@ const CodeAnswerCard = () => {
           />
         ))}
       </div>
-      <textarea placeholder="Ask me anything about your code... (e.g., 'Why is this React hook not working?', 'How to optimize this function?')" className="w-full h-28 bg-[#0F172A] text-white rounded-md p-4 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-      <button className="w-full bg-[#1D4ED8] hover:bg-[#2563EB] text-white rounded-md py-2 text-sm flex items-center justify-center space-x-2">
+      <textarea
+  placeholder="Ask me anything about your code... (e.g., 'Why is this React hook not working?', 'How to optimize this function?')"
+  className="w-full h-28 bg-[#0F172A] text-white text-sm rounded-md p-4 resize-none border-2 border-transparent focus:border-white focus:ring-0 focus:outline-none transition-colors duration-200"
+/>
+      <button className="w-full bg-[#1D4ED8] hover:bg-[#2563EB] text-white rounded-md py-2 text-sm flex items-center justify-center  space-x-2">
         <svg
           className="w-4 h-4"
           fill="none"
