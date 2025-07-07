@@ -2,8 +2,6 @@
 
 
 
-//         <button
-//           key={tab.id}
 //           onClick={() => setActiveTab(tab.id)}
 //           className={`flex-1 py-3 font-medium transition-colors duration-200 ${
 //             activeTab === tab.id
