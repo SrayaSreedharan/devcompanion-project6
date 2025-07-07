@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Tabs from '../layout/Tabs';
 import CodeContextInput from '../CodeContext/CodeContextInput';
 import CodeAnswerCard from './CodeAnswerCard';
-
 import askOpenAI from '../utils/opnRouterApi';
 
 const DevCompanion = () => {
