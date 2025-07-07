@@ -9,7 +9,7 @@ const askOpenAI = async (question, codeContext) => {
         'X-Title': 'DevCompanion',
       },
       body: JSON.stringify({
-        model: 'mistralai/mixtral-8x7b-instruct', // Use a working model
+        model: 'mistralai/mixtral-8x7b-instruct', 
         messages: [
           {
             role: 'user',
