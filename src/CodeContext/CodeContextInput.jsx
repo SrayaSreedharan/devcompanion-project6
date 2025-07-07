@@ -1,5 +1,4 @@
 
-// import { Code2 } from 'lucide-react';
 
 // const CodeContextInput = () => {
 //   return (
