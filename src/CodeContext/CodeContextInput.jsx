@@ -2,8 +2,7 @@
 
 
 
-//         <Code2 className="w-5 h-5 text-white" />
-//         <h3 className="text-2xl font-semibold">
+
 //           Code Context <span className="text-gray-400 text-base">(Optional)</span>
 //         </h3>
 //       </div>
