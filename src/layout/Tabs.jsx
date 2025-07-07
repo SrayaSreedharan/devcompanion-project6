@@ -2,9 +2,6 @@
 
 
 
-//           onClick={() => setActiveTab(tab.id)}
-//           className={`flex-1 py-3 font-medium transition-colors duration-200 ${
-//             activeTab === tab.id
 //               ? 'bg-white text-black'
 //               : 'text-gray-500 hover:bg-gray-200'
 //           }`}
