@@ -2,9 +2,6 @@
 
 
 
-//   return (
-//     <div className="flex w-full max-w-6xl mx-auto rounded-md overflow-hidden bg-gray-100 text-sm">
-//       {tabs.map((tab) => (
 //         <button
 //           key={tab.id}
 //           onClick={() => setActiveTab(tab.id)}
