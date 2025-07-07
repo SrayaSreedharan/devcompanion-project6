@@ -1,20 +1,20 @@
 import React from 'react';
-import Header from '../layout/Header';
-import Tabs from '../layout/Tabs';
-import CodeContextInput from '../CodeContext/CodeContextInput';
-import CodeAnswerCard from '../components/CodeAnswerCard';
+import DevCompanion from '../components/DevCompanion';
 
 const Home = () => {
   return (
-    <div className="bg-[#0F172A] min-h-screen text-white px-4 py-6">
-      <div className="max-w-6xl mx-auto space-y-6">
-        <Header />
-        <Tabs />
-        <CodeContextInput />
-        <CodeAnswerCard />
-      </div>
+
+    <div className="min-h-screen bg-[#0f172a] text-white">
+      <header className="p-4 text-center border-b border-gray-700">
+        <h1 className="text-3xl font-bold">\uD83D\uDCA1 Dev Companion</h1>
+        <p className="text-sm text-gray-400">Your AI-powered Stack Overflow assistant</p>
+      </header>
+      <main className="mt-4">
+        <DevCompanion />
+      </main>
     </div>
   );
 };
+  
 
 export default Home;
