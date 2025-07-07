@@ -2,9 +2,6 @@
 
 
 
-//               ? 'bg-white text-black'
-//               : 'text-gray-500 hover:bg-gray-200'
-//           }`}
 //         >
 //           {tab.label}
 //         </button>
