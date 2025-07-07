@@ -1,8 +1,6 @@
 
 
-//   const tabs = [
-//     { id: 'ask', label: 'Ask AI' },
-//     { id: 'results', label: 'Results (0)' },
+
 //     { id: 'history', label: 'History' },
 //   ];
 
