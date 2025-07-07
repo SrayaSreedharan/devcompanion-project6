@@ -19,7 +19,10 @@ const askOpenAI = async (question, codeContext) => {
   });
 
   const data = await response.json();
+  console.log('Full API response:', data);
+
   return data.choices?.[0]?.message?.content || 'No response from AI.';
+  
 };
 
 export default askOpenAI;

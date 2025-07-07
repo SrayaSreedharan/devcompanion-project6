@@ -17,6 +17,7 @@ const DevCompanion = () => {
     setLoading(true);
     try {
       const response = await askOpenAI(question, codeContext);
+      console.log('AI Response:', response);
       setAnswer(response);
       setActiveTab('results');
     } catch (error) {
