@@ -2,13 +2,6 @@
 
 
 
-//         >
-//           {tab.label}
-//         </button>
-//       ))}
-//     </div>
-//   );
-// };
 
 // export default Tabs;
 
