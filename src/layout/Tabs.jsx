@@ -1,7 +1,4 @@
-// import React, { useState } from 'react';
 
-// const Tabs = () => {
-//   const [activeTab, setActiveTab] = useState('ask');
 
 //   const tabs = [
 //     { id: 'ask', label: 'Ask AI' },
