@@ -3,7 +3,7 @@
 
 
 
-// export default Tabs;
+
 
 import React from 'react';
 
