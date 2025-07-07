@@ -3,8 +3,7 @@
 
 
 
-//           Code Context <span className="text-gray-400 text-base">(Optional)</span>
-//         </h3>
+
 //       </div>
 //      <textarea placeholder="Paste your code here for context..." className="w-full min-h-[240px] bg-[#0F172A] text-gray-300 text-sm rounded-md p-4 resize-y border-2 border-gray-700 focus:border-white focus:ring-0 outline-none transition-colors duration-200"/>
 //     </div>
