@@ -1,8 +1,4 @@
-# 🚀 Dev Companion – AI-Powered Stack Overflow Companion (Chrome Extension)
-
-> A smart, lightweight developer tool to get AI-powered coding assistance in real-time, directly inside your browser.
-
----
+# Dev Companion – AI-Powered Stack Overflow Companion (Chrome Extension)
 
 ## Project Overview
 
