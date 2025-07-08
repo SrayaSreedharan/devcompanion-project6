@@ -13,7 +13,6 @@ const CodeAnswerCard = ({ selectedPrompt, onPromptSelect, question, onQuestionCh
   return (
     <div className="bg-[#1F2937] p-6 rounded-xl w-full shadow-md space-y-6 max-w-6xl mx-auto">
       <h2 className="text-2xl font-semibold">Ask Your Question</h2>
-
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {cardDetails.map((item, idx) => (
           <Card
@@ -27,14 +26,12 @@ const CodeAnswerCard = ({ selectedPrompt, onPromptSelect, question, onQuestionCh
           />
         ))}
       </div>
-
       <textarea
         placeholder="Ask me anything about your code... (e.g., 'Why is this React hook not working?', 'How to optimize this function?')"
         value={question}
         onChange={(e) => onQuestionChange(e.target.value)}
         className="w-full h-28 bg-[#0F172A] text-white text-sm rounded-md p-4 resize-none border-2 border-transparent focus:border-white focus:ring-0 focus:outline-none transition-colors duration-200"
       />
-
       <button
         onClick={onAskAI}
         disabled={loading}
