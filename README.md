@@ -25,9 +25,31 @@
 |-----------------------------|----------------------------------------|
 | Frontend UI                 | React, TailwindCSS                     |
 | AI Integration              | OpenRouter API / OpenAI                |                              
-| Chrome Extension Platform   | Manifest v3, Chrome APIs               |
 | Code Snippet Viewer         | react-syntax-highlighter               |
 
 ---
+## How It Works
 
+1. Open Dev Companion from your Chrome toolbar.
+2. Paste your code or describe your issue.
+3. Select a context prompt (e.g., “Debug this code” or “Optimize performance”).
+4. Ask AI and get your answer instantly.
+5. Copy the result and continue coding.
+
+---
+## API Key Setup (for local development)
+
+To use OpenRouter or OpenAI:
+1. Create a `.env` file in the root of your project.
+2. Add:
+   ```env
+   REACT_APP_OPENROUTER_API_KEY=your_openrouter_api_key
+
+## Installation
+
+1. **Clone the repo**
+2. **Run `npm install`**
+3. **Add `.env`** with your API key:
+4. **Build the extension:**
+npm run build
 
