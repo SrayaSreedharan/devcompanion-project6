@@ -55,7 +55,7 @@ npm run build
 
 ## Key Technical Decisions (Dev Companion)
 
-### 1. **React **
+### 1. **React**
 - **Chosen for a fast development experience and optimized build output**
 - **Enables a modular component-based architecture**
 - **Offers hot module replacement for rapid iteration**
