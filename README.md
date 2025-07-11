@@ -1,4 +1,4 @@
-# Dev Companion – AI-Powered Stack Overflow Companion (Chrome Extension)
+# Dev Companion – AI-Powered Stack Overflow Companion 
 
 ## Project Overview
 
