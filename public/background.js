@@ -1,15 +1,14 @@
 /* global chrome */
+chrome.runtime.onInstalled.addListener(() => {
+  console.log('Extension installed');
+});
 
-chrome.runtime.sendMessage({ action: "getData" }, (response) => {
-  if (chrome.runtime.lastError) {
-    console.error("Message error:", chrome.runtime.lastError.message);
-    return;
+// Example: Send message only if someone connects or on some event
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'getData') {
+    sendResponse({ result: 'Hello from background.js' });
   }
 
-  if (response && response.result) {
-    console.log(response.result);
-  } else {
-    console.warn("No result received");
-  }
+  return true; // Required for async sendResponse
 });
 
