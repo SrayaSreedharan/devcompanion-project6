@@ -14,7 +14,6 @@
 - 🧠 **Context-Aware AI Assistance** using OpenRouter / OpenAI APIs  
 - 💬 **Ask AI Anything** – Paste code, describe errors, or ask coding questions
 - 🎨 **Clean, Developer-Themed UI** with dark mode support
-- 📋 **One-Click Copy** of AI-suggested code
 
 
 ---
