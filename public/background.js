@@ -27,7 +27,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         sendResponse({ error: err.message });
       });
 
-    return true; // keeps sendResponse open
+    return true; 
   }
 });
 
