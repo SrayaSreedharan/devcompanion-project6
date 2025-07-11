@@ -14,5 +14,4 @@ const CodeContextInput = ({ value, onChange }) => {
     </div>
   );
 };
-
 export default CodeContextInput;
