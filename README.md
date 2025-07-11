@@ -119,4 +119,7 @@ npm run build
   - **Logged errors for debugging**
   - **Prepared for future retry logic and usage metering**
 
+## License
+
+This project is licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.
 
