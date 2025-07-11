@@ -3,13 +3,15 @@
   "name": "Dev Companion – AI Stack Overflow Assistant",
   "version": "1.0",
   "description": "AI-powered code helper",
-  "action": {
-    "default_popup": "index.html",
-    "default_icon": "mylogo.png"
-  },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["scripting", "activeTab"],
   "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "128": "logo512.png"
   }
 }

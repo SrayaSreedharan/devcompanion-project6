@@ -28,22 +28,26 @@ const DevCompanion = () => {
   };
 
   // ✅ Add this effect to listen to messages from background.js
-  useEffect(() => {
-    function handleMessage(request, sender, sendResponse) {
-      if (request.action === 'getData') {
-        console.log('Received message from background:', request);
-        sendResponse({ result: 'Hello from DevCompanion popup!' });
-      }
-      return true; // Keeps sendResponse alive for async
+
+useEffect(() => {
+  if (!chrome.runtime?.sendMessage) {
+    console.error('chrome.runtime.sendMessage not available');
+    return;
+  }
+
+  chrome.runtime.sendMessage({ action: 'getData' }, (response) => {
+    if (chrome.runtime.lastError) {
+      console.error('Runtime error:', chrome.runtime.lastError.message);
+      return;
     }
 
-    chrome.runtime.onMessage.addListener(handleMessage);
+    console.log('Response from background:', response);
+    if (response?.result) {
+      alert(response.result); // just to test
+    }
+  });
+}, []);
 
-    // Cleanup listener on unmount
-    return () => {
-      chrome.runtime.onMessage.removeListener(handleMessage);
-    };
-  }, []);
 
   return (
     <div className="p-4 text-white bg-[#0f172a] min-h-screen">
