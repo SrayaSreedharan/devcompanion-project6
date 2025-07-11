@@ -53,3 +53,31 @@ To use OpenRouter or OpenAI:
 4. **Build the extension:**
 npm run build
 
+## Key Technical Decisions (Dev Companion)
+
+### 1. **React + Vite**
+- **Chosen for a fast development experience and optimized build output**
+- **Enables a modular component-based architecture**
+- **Offers hot module replacement for rapid iteration**
+
+
+### 2. **OpenRouter API Integration**
+- **Chosen for flexible and multi-model AI access**
+- **Simplifies AI query logic through a single API endpoint**
+- **Secured via environment variables and rate-limited for safety**
+
+### 3. **Tailwind CSS for UI**
+- **Used for fast, utility-first styling with a clean developer theme**
+- **Simplifies component-level customization and dark mode support**
+- **Enables rapid prototyping of UI features like buttons, tabs, and cards**
+
+### 4. **Prompt-Based Query System**
+- **Designed to offer predefined prompts for debugging, optimization, explanation, and best practices**
+- **Improves UX by guiding users toward relevant AI questions**
+- **Allows future extensibility for custom prompt creation**
+
+### 5. **Component-Based Widget System**
+- **Built as reusable, isolated components (e.g., `Tabs`, `CodeContextInput`, `CodeAnswerCard`)**
+- **Encourages scalability and ease of maintenance**
+- **Supports adding future widgets like history, favorites, or saved answers**
+
