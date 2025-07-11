@@ -27,26 +27,26 @@ const DevCompanion = () => {
     }
   };
 
-  // ✅ Add this effect to listen to messages from background.js
+ 
+
+
 
 useEffect(() => {
   if (!chrome.runtime?.sendMessage) {
-    console.error('chrome.runtime.sendMessage not available');
+    console.error("chrome.runtime.sendMessage not available");
     return;
   }
 
-  chrome.runtime.sendMessage({ action: 'getData' }, (response) => {
+  chrome.runtime.sendMessage({ action: "getData" }, (response) => {
     if (chrome.runtime.lastError) {
-      console.error('Runtime error:', chrome.runtime.lastError.message);
+      console.error("Runtime error:", chrome.runtime.lastError.message);
       return;
     }
 
-    console.log('Response from background:', response);
-    if (response?.result) {
-      alert(response.result); // just to test
-    }
+    console.log("Response from background:", response.result);
   });
 }, []);
+
 
 
   return (
