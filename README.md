@@ -55,7 +55,7 @@ npm run build
 
 ## Key Technical Decisions (Dev Companion)
 
-### 1. **React + Vite**
+### 1. **React **
 - **Chosen for a fast development experience and optimized build output**
 - **Enables a modular component-based architecture**
 - **Offers hot module replacement for rapid iteration**
@@ -80,4 +80,44 @@ npm run build
 - **Built as reusable, isolated components (e.g., `Tabs`, `CodeContextInput`, `CodeAnswerCard`)**
 - **Encourages scalability and ease of maintenance**
 - **Supports adding future widgets like history, favorites, or saved answers**
+
+
+## Challenges and Solutions
+
+### 1. **Contextual AI Understanding**
+- **Challenge**: Ensuring AI responses are relevant and based on user-pasted code
+- **Solution**:
+  - **Combined user questions with code context** before sending to the API
+  - **Structured prompt formatting** to maintain clarity
+  - **Selected models with strong multi-turn conversation capabilities**
+
+### 2. **API Key Security**
+- **Challenge**: Preventing API key exposure in a client-side 
+- **Solution**:
+  - **Used environment variables** (`REACT_APP_OPENROUTER_API_KEY`) in development
+  - **Encouraged users to set keys via Vercel or .env** files
+  - **Planned backend proxy for production use**
+
+
+### 3. **Cross-Component State Management**
+- **Challenge**: Sharing selected prompts, code context, and AI responses cleanly
+- **Solution**:
+  - **Used React hooks and local component state**
+  - **Designed reusable, stateful components** (`CodeAnswerCard`, `CodeContextInput`)
+  - **Kept logic minimal and easy to follow**
+
+### 4. **User Experience**
+- **Challenge**: Creating a developer-friendly UI that feels fast and intuitive
+- **Solution**:
+  - **Used Tailwind CSS** for responsive, theme-consistent design
+  - **Provided predefined prompts** for common coding queries
+  - **Added loading indicators and visual feedback** (e.g., `Thinking...`, copy buttons)
+
+### 5. **AI Performance & Rate Limits**
+- **Challenge**: Handling slow responses or rate-limited requests from OpenRouter
+- **Solution**:
+  - **Displayed fallback messages** when responses fail
+  - **Logged errors for debugging**
+  - **Prepared for future retry logic and usage metering**
+
 
