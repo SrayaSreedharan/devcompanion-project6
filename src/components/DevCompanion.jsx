@@ -1,5 +1,4 @@
-/* global chrome */
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import Tabs from '../layout/Tabs';
 import CodeContextInput from '../CodeContext/CodeContextInput';
 import CodeAnswerCard from './CodeAnswerCard';
@@ -26,21 +25,6 @@ const DevCompanion = () => {
       setLoading(false);
     }
   };
-    useEffect(() => {
-      if (!chrome.runtime?.sendMessage) {
-        console.error("chrome.runtime.sendMessage not available");
-        return;
-      }
-
-      chrome.runtime.sendMessage({ action: "getData" }, (response) => {
-        if (chrome.runtime.lastError) {
-          console.error("Runtime error:", chrome.runtime.lastError.message);
-          return;
-        }
-
-        console.log("Response from background:", response.result);
-      });
-    }, []);
 
   return (
     <div className="p-4 text-white bg-[#0f172a] min-h-screen">
