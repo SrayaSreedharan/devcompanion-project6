@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* global chrome */
+import React, { useState, useEffect } from 'react';
 import Tabs from '../layout/Tabs';
 import CodeContextInput from '../CodeContext/CodeContextInput';
 import CodeAnswerCard from './CodeAnswerCard';
@@ -25,6 +26,24 @@ const DevCompanion = () => {
       setLoading(false);
     }
   };
+
+  // ✅ Add this effect to listen to messages from background.js
+  useEffect(() => {
+    function handleMessage(request, sender, sendResponse) {
+      if (request.action === 'getData') {
+        console.log('Received message from background:', request);
+        sendResponse({ result: 'Hello from DevCompanion popup!' });
+      }
+      return true; // Keeps sendResponse alive for async
+    }
+
+    chrome.runtime.onMessage.addListener(handleMessage);
+
+    // Cleanup listener on unmount
+    return () => {
+      chrome.runtime.onMessage.removeListener(handleMessage);
+    };
+  }, []);
 
   return (
     <div className="p-4 text-white bg-[#0f172a] min-h-screen">
