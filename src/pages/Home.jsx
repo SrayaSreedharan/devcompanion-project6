@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../layout/Header';
 import DevCompanion from '../components/DevCompanion';
 import Warningmessage from '../components/Warningmessage';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <main className="mt-4">
         <DevCompanion />
       </main>
+      <Footer/>
       </div>
     </div>
   );
